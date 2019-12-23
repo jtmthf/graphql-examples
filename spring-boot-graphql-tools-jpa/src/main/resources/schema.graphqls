@@ -1,0 +1,26 @@
+type Query {
+    getTodo(id: ID!): Todo
+    getTodos()
+}
+
+type Mutation {
+    createTodo(input: CreateTodoPayload!): Todo!
+    updateTodo(input: UpdateTodoPayload!): Todo!
+}
+
+type Todo {
+    id: ID!
+    title: String!
+    complete: Boolean!
+}
+
+input CreateTodoPayload {
+    title: String!
+    complete: Boolean
+}
+
+input UpdateTodoPayload {
+    id: ID!
+    title: String
+    complete: Boolean
+}

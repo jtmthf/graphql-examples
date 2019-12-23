@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc.lob.non_contextual_creation: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/todos
+    username: todos
+    password: todos
+  liquibase:
+    change-log: classpath:/config/liquibase/master.xml
+
+logging:
+  level:
+    sql: DEBUG

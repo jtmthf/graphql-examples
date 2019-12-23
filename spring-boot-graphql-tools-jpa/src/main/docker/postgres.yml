@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:11.4-alpine
+    environment:
+      POSTGRES_USER: todos
+      POSTGRES_PASSWORD: todos
+    ports:
+      - 5432:5432
